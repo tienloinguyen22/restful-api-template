@@ -10,3 +10,8 @@ info:
   version: 0.1.0
 servers:
   - url: http://localhost:3000/api
+tags:
+  - name: Auth
+    description: Auth operations
+  - name: Profile
+    description: Profile operations

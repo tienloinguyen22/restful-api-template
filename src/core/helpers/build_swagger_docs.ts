@@ -12,7 +12,7 @@ export const bulidSwaggerDocs = (): any => {
     if (!excludeModules.includes(module)) {
       const aggregates = fs.readdirSync(`src/modules/${module}/aggregates`);
       aggregates.forEach((aggregate) => {
-        const yamlFile = `src/modules/${module}/aggregates/${aggregate}/swagger.yaml`;
+        const yamlFile = `src/modules/${module}/aggregates/${aggregate}/${aggregate}.swagger.yaml`;
         if (fs.existsSync(yamlFile)) {
           const moduleYAML = YAML.load(yamlFile);
           swaggerDocument = _.merge(swaggerDocument, moduleYAML);
