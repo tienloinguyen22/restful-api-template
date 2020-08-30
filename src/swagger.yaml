@@ -15,3 +15,5 @@ tags:
     description: Auth operations
   - name: Profile
     description: Profile operations
+  - name: Uploads
+    description: Uploads operations
