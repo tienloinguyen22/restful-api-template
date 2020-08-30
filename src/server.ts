@@ -13,6 +13,7 @@ import { usersController } from './modules/auth/aggregates/users/users.controlle
 import { rolesController } from './modules/auth/aggregates/roles/roles.controller';
 import { profilesController } from './modules/auth/aggregates/profiles/profiles.controller';
 import { authController } from './modules/auth/aggregates/auth/auth.controller';
+import { uploadsController } from './modules/uploads/aggregates/uploads/uploads.controller';
 
 (async () => {
   // 0. connect to mongo
@@ -51,6 +52,7 @@ import { authController } from './modules/auth/aggregates/auth/auth.controller';
   server.use(`${config.api.prefix}/users`, usersController);
   server.use(`${config.api.prefix}/roles`, rolesController);
   server.use(`${config.api.prefix}/profiles`, profilesController);
+  server.use(`${config.api.prefix}/uploads`, uploadsController);
   server.use(errorHandler());
 
   // 4. setup swaggers

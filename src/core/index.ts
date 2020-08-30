@@ -14,6 +14,7 @@ export * from './helpers/build_swagger_docs';
 export * from './helpers/get_current_timestamp_in_milliseconds';
 export * from './helpers/add_creation_info';
 export * from './helpers/add_modification_info';
+export * from './helpers/allow_file_sizes';
 
 export * from './interfaces/find_query';
 export * from './interfaces/find_result';
@@ -36,3 +37,4 @@ export * from './loggers';
 export * from './middlewares/error_handler';
 export * from './middlewares/verify_token';
 export * from './middlewares/authenticate';
+export * from './middlewares/multer_images';
