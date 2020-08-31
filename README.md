@@ -1,8 +1,6 @@
-# 2020 Pets Hotel
-
 ## Introduction
 
-This project is a web template used as a starter kit for Pets Hotel
+This project is a web template used as a starter kit for Restful API
 
 ## Getting Started
 
