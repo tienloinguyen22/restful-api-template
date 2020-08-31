@@ -1,5 +1,5 @@
 import { IsAuditable, ISODate, Genders, LoginTypes } from '@app/core';
-import { Role } from '../../roles/interfaces/Role';
+import { Role } from '../../roles/interfaces/role';
 
 export interface User extends IsAuditable {
   _id: string;

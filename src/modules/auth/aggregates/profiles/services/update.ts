@@ -3,7 +3,7 @@ import { Response, Request } from 'express';
 import { validatePayload, regex, Genders, addModificationInfo } from '@app/core';
 import { StatusCodes } from 'http-status-codes';
 import _ from 'lodash';
-import { User } from '../../users/interfaces/User';
+import { User } from '../../users/interfaces/user';
 import { usersRepository } from '../../users/users.repository';
 
 export const update = async (req: Request, res: Response, next: Function): Promise<void> => {
