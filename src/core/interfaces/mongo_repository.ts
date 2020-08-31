@@ -1,7 +1,7 @@
-import { FindQuery } from '@app/core';
+import { RepositoryQuery } from '@app/core';
 
 export interface Repository<T> {
-  find: (filters: unknown, query: FindQuery) => Promise<T[]>;
+  find: (query: RepositoryQuery) => Promise<T[]>;
   findById: (id: string) => Promise<T | undefined>;
   findOne: (filters: unknown) => Promise<T | undefined>;
   count: (filters: unknown) => Promise<number>;

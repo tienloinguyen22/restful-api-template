@@ -2,7 +2,7 @@ import { addAuditableSchema, LoginTypes, Genders, MongoRepository } from '@app/c
 import mongoose from 'mongoose';
 import { User } from './interfaces/User';
 
-const UsersSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
   addAuditableSchema({
     fullName: String,
     email: String,
@@ -40,12 +40,12 @@ const UsersSchema = new mongoose.Schema(
     },
   }),
 );
-UsersSchema.index({
+UserSchema.index({
   email: 'text',
   firstName: 'text',
   lastName: 'text',
 });
 
-export const UsersModel = mongoose.model('User', UsersSchema);
+export const UsersModel = mongoose.model('User', UserSchema);
 
 export const usersRepository = new MongoRepository<User>(UsersModel, ['roles']);

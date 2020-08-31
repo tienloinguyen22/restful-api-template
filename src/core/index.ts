@@ -15,6 +15,7 @@ export * from './helpers/get_current_timestamp_in_milliseconds';
 export * from './helpers/add_creation_info';
 export * from './helpers/add_modification_info';
 export * from './helpers/allow_file_sizes';
+export * from './helpers/repository_utils';
 
 export * from './interfaces/find_query';
 export * from './interfaces/find_result';
@@ -29,6 +30,7 @@ export * from './interfaces/timestamp_in_milliseconds';
 export * from './interfaces/login_types';
 export * from './interfaces/genders';
 export * from './interfaces/iso_date';
+export * from './interfaces/repository_query';
 
 export * from './errors/api_error';
 

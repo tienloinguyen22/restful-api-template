@@ -2,7 +2,7 @@
 
 import { connect, Model, Document } from 'mongoose';
 import { Repository } from '../interfaces/mongo_repository';
-import { FindQuery } from '../interfaces/find_query';
+import { RepositoryQuery } from '../interfaces/repository_query';
 
 export const startDatabase = async (connectionString: string): Promise<void> => {
   await connect(connectionString, {
@@ -54,9 +54,10 @@ export class MongoRepository<T> implements Repository<T> {
       .lean();
   }
 
-  async find(filters: any, query: FindQuery): Promise<T[]> {
+  async find(query: RepositoryQuery): Promise<T[]> {
     return this.model
-      .find(filters)
+      .find(query.filters)
+      .sort(query.sortBy)
       .populate(this.populateFields)
       .skip((query.pageNumber - 1) * query.pageSize)
       .limit(query.pageSize) as any;

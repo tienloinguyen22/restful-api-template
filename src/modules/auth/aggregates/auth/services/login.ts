@@ -10,9 +10,9 @@ import {
 import * as yup from 'yup';
 import admin from 'firebase-admin';
 import { StatusCodes } from 'http-status-codes';
-import { LoginPayload } from '../interfaces/LoginPayload';
 import { usersRepository } from '../../users/users.repository';
-import { User } from '../../users/interfaces/User';
+import { LoginPayload } from '../interfaces/login_payload';
+import { User } from '../../users/interfaces/user';
 
 export const login = async (req: Request, res: Response, next: Function): Promise<void> => {
   try {

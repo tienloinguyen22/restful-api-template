@@ -17,3 +17,5 @@ tags:
     description: Profile operations
   - name: Uploads
     description: Uploads operations
+  - name: Breeds
+    description: Breeds operations
