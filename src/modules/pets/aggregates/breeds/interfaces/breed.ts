@@ -1,5 +1,5 @@
 import { IsAuditable } from '@app/core';
-import { PetSpecies } from '../../pets/interfaces/pet_species';
+import { PetSpecies } from '../../pets/interfaces';
 
 export interface Breed extends IsAuditable {
   _id: string;

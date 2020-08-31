@@ -1,7 +1,7 @@
 import { addAuditableSchema, MongoRepository } from '@app/core';
 import mongoose from 'mongoose';
-import { PetSpecies } from '../pets/interfaces/pet_species';
-import { Breed } from './interfaces/breed';
+import { PetSpecies } from '../pets/interfaces';
+import { Breed } from './interfaces';
 
 const BreedSchema = new mongoose.Schema(
   addAuditableSchema({

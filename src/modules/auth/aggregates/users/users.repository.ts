@@ -1,6 +1,6 @@
 import { addAuditableSchema, LoginTypes, Genders, MongoRepository } from '@app/core';
 import mongoose from 'mongoose';
-import { User } from './interfaces/user';
+import { User } from './interfaces';
 
 const UserSchema = new mongoose.Schema(
   addAuditableSchema({
